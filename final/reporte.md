@@ -62,6 +62,29 @@ Puedes acceder al conjunto de datos del Titanic en Kaggle a través de la siguie
 ## Elección de Implementación:
 Opté por utilizar la implementación de regresión logística de scikit-learn en lugar de crear una desde cero debido a su eficiencia y capacidad para obtener resultados sólidos en menos tiempo. Los resultados obtenidos con esta implementación fueron prometedores, alcanzando una precisión del 0.88. La curva de aprendizaje muestra un buen rendimiento, los coeficientes son coherentes y significativos. Dado que este modelo es relativamente simple, pudimos dedicar tiempo y esfuerzo para ajustar los hiperparámetros y mejorar aún más los resultados.
 
+## Técnicas de preprocesamiento
+1. Eliminación de columnas irrelevantes:
+   - `data.drop(['PassengerId', 'Name', 'Ticket', 'Cabin'], axis=1, inplace=True)`
+
+   Utilidad: Esta línea de código elimina las columnas 'PassengerId', 'Name', 'Ticket' y 'Cabin' del DataFrame `data`. Estas columnas se consideran irrelevantes para el análisis o se pueden considerar que no aportan información útil para el modelo de predicción. La eliminación de características no esenciales puede simplificar el conjunto de datos y mejorar la eficiencia del modelo.
+
+2. Relleno de valores faltantes en la columna 'Age':
+   - `data['Age'].fillna(data['Age'].mean(), inplace=True)`
+
+   Utilidad: Esta línea de código rellena los valores faltantes en la columna 'Age' con la media de las edades existentes en el conjunto de datos. Esto se hace para evitar problemas al entrenar un modelo de aprendizaje automático, ya que muchos algoritmos no pueden manejar valores nulos o faltantes. Al usar la media, se proporciona una estimación razonable para los valores faltantes.
+
+3. Relleno de valores faltantes en la columna 'Embarked':
+   - `data['Embarked'].fillna(data['Embarked'].mode()[0], inplace=True)`
+
+   Utilidad: Aquí, se rellenan los valores faltantes en la columna 'Embarked' con el valor más frecuente (la moda) en esa columna. Al igual que con 'Age', esto se hace para tratar los valores faltantes y asegurarse de que todos los registros tengan un valor válido en esta columna categórica.
+
+4. Codificación one-hot de columnas categóricas:
+   - `data = pd.get_dummies(data, columns=['Sex', 'Embarked'], drop_first=True)`
+
+   Utilidad: En esta línea de código, se realiza la codificación one-hot en las columnas categóricas 'Sex' y 'Embarked'. La codificación one-hot convierte las categorías en columnas binarias (0 o 1), lo que permite que los algoritmos de aprendizaje automático trabajen con estas características categóricas de manera adecuada. El parámetro `drop_first=True` se utiliza para evitar la multicolinealidad al eliminar una de las columnas binarias, ya que la información de la columna eliminada se puede inferir a partir de las demás.
+
+En resumen, estas técnicas de preprocesamiento son fundamentales para limpiar y preparar los datos antes de aplicar modelos de aprendizaje automático en el análisis del dataset del Titanic. Ayudan a tratar valores faltantes, eliminar columnas irrelevantes y convertir características categóricas en un formato adecuado para su uso en modelos predictivos.
+
 ## Separación y Evaluación de Datos:
 Dividimos nuestros datos en conjuntos de entrenamiento (train) y prueba (test) utilizando una división de 90/10 de forma aleatoria, utilizando un valor de random state igual a 42 para asegurar la reproducibilidad. Esta división nos permitió evaluar el modelo de manera efectiva y ajustar los hiperparámetros.
 
