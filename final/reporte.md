@@ -91,26 +91,38 @@ Dividimos nuestros datos en conjuntos de entrenamiento (train) y prueba (test) u
 ### Diagnóstico y explicación el grado de bias o sesgo: bajo medio alto
 
 ![Learning Curve del modelo](images/image.png)
+
+
 En esta grafica se puede ver que conforme aumenta el tamaño del conjunto de entrenamiento, el rendimiento en el conjunto de prueba también mejora. Esta convergencia gradual entre el rendimiento en el conjunto de entrenamiento y el conjunto de prueba es una señal muy positiva. Muestra que el modelo no solo se está ajustando a los datos de entrenamiento (lo que podría indicar sobreajuste o alto sesgo), sino que también está generalizando bien a datos nuevos y no vistos. 
 
 
 ### Diagnóstico y explicación el grado de varianza: bajo medio alto
 
 ![Classification Report del modelo](images/cr.png)
+
+
 En las metricas de evaluacion de nuestro modelo al realizar el refinamiento pudimos ver una mejora en las metricas de este, por lo que, podemos decir que el grado de varianza es bajo, ya que, el modelo no esta sobreajustado a los datos de entrenamiento y generaliza bien a datos nuevos y no vistos. Cosa que confirma la grafica de la curva de aprendizaje y la matriz de confusion.
 ![Classification Report del modelo](images/cm.png)
+
+
 En la matriz de confusion podemos ver que igualmente se presenta una varianza del modelo baja, esto debido a que los valores de la diagonal son los mas altos y los que estan fuera de la diagonal son los mas bajos, lo que nos indica que el modelo esta prediciendo bien los valores de la clase 0 y 1 y no hay un sobreajuste o subajuste de los datos que nos aumente la varianza del modelo.
 ![Learning Curve del modelo](images/LR2.png)
+
+
 Las curvas de entrenamiento y validación están convergiendo y son cercanas entre sí, es probable que el modelo tenga una baja varianza. Si están muy separadas, el modelo puede estar sobreajustando pero nosotros estamos en el caso contratio.
 
 ## Diagnóstico del Ajuste del Modelo:
+
 ![Learning Curve del modelo](images/LR2.png)
+
+
 Para evaluar el ajuste del modelo, analizamos la curva de aprendizaje. Observamos que los conjuntos de entrenamiento y validación comienzan a separarse y luego convergen, lo que es un buen indicador de que el modelo se está ajustando correctamente. No se observa subajuste (underfitting) ni sobreajuste (overfitting).
 
 ## Optimización de Hiperparámetros:
 Utilizamos el framework Optuna para mejorar iterativamente la métrica de precisión (accuracy) del modelo. A través de esta optimización, logramos mejorar la métrica de precisión hasta alcanzar un valor de 0.88, lo que indica una mejora sustancial en el rendimiento del modelo.
 
 ![Classification Report del modelo](images/cr.png)
+
 
 En resumen, la implementación de regresión logística utilizando scikit-learn ha demostrado ser efectiva en este conjunto de datos. Identificamos y abordamos problemas de sesgo y alta varianza, y logramos un ajuste adecuado del modelo mediante la optimización de hiperparámetros. Los resultados son prometedores y respaldados por indicadores claros y gráficas comparativas en nuestro informe.
 
