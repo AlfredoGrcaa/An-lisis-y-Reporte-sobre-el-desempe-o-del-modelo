@@ -3,17 +3,17 @@ Análisis y Reporte sobre el desempeño del modelo
 
 ## En la carpeta final/machine_learning se encuentran los archivos finales de la actividad
 
-### En modelo.ipynb;
+### En modelo.ipynb SMA0102 SMA0104
 - Se encuentra el entrenamiento y la evaluación del desempeño del modelo
 - Se ecnuentras las respuestas de la actividad
 
-### En reporte.md
-- Reporte de la actividad y resultados
+### En reporte.md SMA0102 SMA0104
+- Reporte de la actividad y resultados 
 
 ### train.csv - test.csv
 - Son los archivos que se usaron para entrenar y evaluar el modelo
 
-### En 'contexto y normatividad.pdf'
+### En 'contexto y normatividad.pdf' SEG0403
 - Es la explicación para el requisito de la subcompetencia SEG0403
 
 ## En la carpeta retro se encuentran los archivos de la actividad de retroalimentación
@@ -27,6 +27,9 @@ Análisis y Reporte sobre el desempeño del modelo
 
 ### train.csv - test.csv
 - Son los archivos que se usaron para entrenar y evaluar el modelo
+
+## En la carpeta final/estadistica se encuentran los archivos finales del modulo de estadística
+
 
 ## Regresión logística
 
