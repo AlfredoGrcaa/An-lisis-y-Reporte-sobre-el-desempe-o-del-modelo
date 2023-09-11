@@ -1,8 +1,6 @@
 # Analisis-y-Reporte-sobre-el-desempeño-del-modelo
 Análisis y Reporte sobre el desempeño del modelo
 
-## En la carpeta final se encuentran los archivos finales de la actividad
-
 ### En modelo.ipynb;
 - Se encuentra el entrenamiento y la evaluación del desempeño del modelo
 - Se ecnuentras las respuestas de la actividad
@@ -15,18 +13,6 @@ Análisis y Reporte sobre el desempeño del modelo
 
 ### En 'contexto y normatividad.pdf'
 - Es la explicación para el requisito de la subcompetencia SEG0403
-
-## En la carpeta retro se encuentran los archivos de la actividad de retroalimentación
-
-### En modelo.ipynb;
-- Se encuentra el entrenamiento y la evaluación del desempeño del modelo
-- Se ecnuentras las respuestas de la actividad
-
-### En modelo.pdf
-- Reporte de la actividad y resultados
-
-### train.csv - test.csv
-- Son los archivos que se usaron para entrenar y evaluar el modelo
 
 ## Regresión logística
 
