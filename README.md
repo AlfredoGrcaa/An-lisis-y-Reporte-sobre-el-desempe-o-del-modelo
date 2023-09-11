@@ -1,7 +1,7 @@
 # Analisis-y-Reporte-sobre-el-desempeño-del-modelo
 Análisis y Reporte sobre el desempeño del modelo
 
-## En la carpeta final se encuentran los archivos finales de la actividad
+## En la carpeta final/machine_learning se encuentran los archivos finales de la actividad
 
 ### En modelo.ipynb;
 - Se encuentra el entrenamiento y la evaluación del desempeño del modelo
